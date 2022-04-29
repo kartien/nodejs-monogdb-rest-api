@@ -1,11 +1,13 @@
-import {Router} from 'express';
+import { Router } from "express";
 
-const router = Router()
+const router = Router();
 
-router.get('/tasks', (req, res) => {
-    res.send('Tasks')
-})
+router.get('/', (req, res) => {
+  res.send("Tasks");
+});
 
+router.post("/", (req, res) => {
+  res.json("saving a new tast");
+});
 
-export default router
-
+export default router;
