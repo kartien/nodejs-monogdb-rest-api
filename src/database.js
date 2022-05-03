@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 import config from './config';
 
 
@@ -8,5 +8,5 @@ import config from './config';
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-  console.log("Database is connect to: ", db.connection.name);
+  console.log("Database is connected  to: ", db.connection.name);
 })();

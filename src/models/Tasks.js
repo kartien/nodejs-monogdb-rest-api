@@ -19,8 +19,6 @@ const taskSchema = new Schema({
     timestamp: true
 });
 
-
-
 export default model('Task', taskSchema)
 
 
