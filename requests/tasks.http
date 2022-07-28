@@ -1,0 +1,15 @@
+###
+GET http://localhost:3000/api/task
+
+
+###
+POST http://localhost:3000/api/task
+Content-Type: application/json
+
+{
+    "title": "Learning docker",
+    "description": "Youtube"
+}
+
+
+
