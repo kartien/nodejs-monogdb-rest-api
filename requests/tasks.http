@@ -7,12 +7,28 @@ POST http://localhost:3000/api/task
 Content-Type: application/json
 
 {
-    "title": "Learning C",
-    "description": "Youtube"
+    "title": "Learning Goland",
+    "description": "Udemy",
+    "done": true 
 }
 
 ### 
 GET http://localhost:3000/api/task/62e2b7f99821b5046189cc34
 
+
+### 
+DELETE  http://localhost:3000/api/task/62e2b69d8196afbc2173639f
+
+### 
+GET http://localhost:3000/api/task/done 
+
+
+### 
+PUT http://localhost:3000/api/task/62e2e6372f2a454da1663758
+Content-Type: application/json
+
+{
+    "title": "Learning Java"
+}
 
 
