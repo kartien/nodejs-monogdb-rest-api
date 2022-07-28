@@ -1,18 +1,15 @@
 import { Router } from "express";
-import Task from '../models/task'
 
+import { findAllTasks, createTask, findOneTask } from "../controllers/task.controller";
 
 const router = Router();
 
-router.get("/task", async (req, res) => {
-    const task = await Task.find()
-    res.json(task)
-});
+router.post("/task", createTask);
 
-router.post("/task", async (req, res) => {
-    const newTask =  new Task({title: req.body.title, description: req.body.description})
-    const taskSave = await newTask.save();
-    res.json(taskSave);
-});
+router.get("/task", findAllTasks);
+
+router.get("/task/:id", findOneTask);
+
+
 
 export default router;

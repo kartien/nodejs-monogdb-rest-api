@@ -7,9 +7,12 @@ POST http://localhost:3000/api/task
 Content-Type: application/json
 
 {
-    "title": "Learning docker",
+    "title": "Learning C",
     "description": "Youtube"
 }
+
+### 
+GET http://localhost:3000/api/task/62e2b7f99821b5046189cc34
 
 
 
