@@ -7,8 +7,8 @@ POST http://localhost:3000/api/task
 Content-Type: application/json
 
 {
-    "title": "Learning Goland",
-    "description": "Udemy",
+    "title": "Learning Svelte",
+    "description": "Youtube video",
     "done": true 
 }
 

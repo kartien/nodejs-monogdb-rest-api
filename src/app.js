@@ -1,4 +1,6 @@
-import express, { application } from "express";
+import express from "express";
+import morgan from "morgan";
+import cors from "cors";
 import IndexRoutes from "./routes/index.routes";
 
 const app = express();
@@ -6,9 +8,14 @@ const app = express();
 // Setings
 app.set("port", process.env.PORT || 3000);
 
-app.use(express.json())
+// Middlewares
+const corsOptions = {};
+app.use(cors(corsOptions));
+app.use(morgan("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// Routes 
+// Routes
 app.get("/", (req, res) => {
   res.json({ messge: "Welcome to my application" });
 });
