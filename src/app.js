@@ -9,7 +9,7 @@ const app = express();
 app.set("port", process.env.PORT || 3000);
 
 // Middlewares
-const corsOptions = {};
+const corsOptions = {}; // {origin: "http://localhost:3000"}
 app.use(cors(corsOptions));
 app.use(morgan("dev"));
 app.use(express.json());

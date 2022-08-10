@@ -1,4 +1,5 @@
 import { Schema, model } from "mongoose";
+import mongoosePaginate from "mongoose-paginate-v2";
 
 const taskSchemmma = new Schema(
   {
@@ -22,4 +23,5 @@ const taskSchemmma = new Schema(
   }
 );
 
+taskSchemmma.plugin(mongoosePaginate)
 export default model("Task", taskSchemmma);
